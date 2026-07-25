@@ -8,7 +8,7 @@ export function CompareBar() {
 
   return (
     <div className="compare-bar">
-      <div style={{ flex: 1, fontSize: '0.88rem' }}>
+      <div className="compare-bar-text">
         Comparing {compareIds.length}/3:{' '}
         {compareIds.map((id) => getProduct(id)?.name).filter(Boolean).join(' · ')}
       </div>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Minus, Plus, Trash2, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { formatUGX } from '../data/products'
@@ -14,6 +15,13 @@ export function CartDrawer() {
     cartTotal,
   } = useStore()
   const { isAuthenticated } = useAuth()
+
+  useEffect(() => {
+    document.body.style.overflow = cartOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [cartOpen])
 
   return (
     <>

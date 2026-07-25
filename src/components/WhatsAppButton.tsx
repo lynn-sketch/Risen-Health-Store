@@ -10,8 +10,8 @@ export function WhatsAppButton() {
       rel="noreferrer"
       aria-label="Chat with us on WhatsApp"
     >
-      <MessageCircle size={20} />
-      <span>Chat with us</span>
+      <MessageCircle size={22} />
+      <span className="wa-float-label">Chat with us</span>
     </a>
   )
 }

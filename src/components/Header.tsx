@@ -105,13 +105,13 @@ export function Header() {
     <header className="site-header">
       <div className="topbar">
         <div className="container">
-          <span>
-            Fast delivery on orders in Kampala ·{' '}
+          <span className="topbar-left">
+            Fast delivery in Kampala ·{' '}
             <Link to="/track" style={{ color: 'var(--gold-light)' }}>
               Track Order →
             </Link>
           </span>
-          <span>
+          <span className="topbar-right">
             <a
               href={`https://wa.me/${WHATSAPP_NUMBERS.primary}`}
               target="_blank"

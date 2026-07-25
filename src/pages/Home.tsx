@@ -30,7 +30,7 @@ export function Home() {
               <Link to="/order" className="btn btn-primary">
                 Order Catalogue <ArrowRight size={18} />
               </Link>
-              <Link to="/assessment" className="btn btn-outline" style={{ borderColor: 'rgba(255,252,247,0.5)', color: 'var(--white)' }}>
+              <Link to="/assessment" className="btn btn-outline">
                 Free Health Quiz
               </Link>
             </div>
