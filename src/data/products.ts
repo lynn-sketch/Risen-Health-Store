@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 export type Category =
   | 'regenerative'
   | 'herbal'
@@ -41,7 +43,7 @@ export const products: Product[] = [
     brand: 'Vmax',
     category: 'regenerative',
     price: 145000,
-    image: '/products/fish-oil.png',
+    image: asset('products/fish-oil.png'),
     tagline: 'Omega 3 · 6 · 9 — Not Fortified',
     description:
       'Omega 3, 6 and 9 soft capsules that support brain, heart, joints, eyes and healthy skin. 60 capsules per bottle.',
@@ -65,7 +67,7 @@ export const products: Product[] = [
     brand: 'Vmax',
     category: 'regenerative',
     price: 155000,
-    image: '/products/seabuckthorn.png',
+    image: asset('products/seabuckthorn.png'),
     tagline: 'Omega 3·6·7·9 · Vitamins C, E & A',
     description:
       'Seabuckthorn oil capsules rich in omegas and vitamins C, E and A — for immunity, lungs, digestion and antioxidant support.',
@@ -87,7 +89,7 @@ export const products: Product[] = [
     brand: 'Vmax',
     category: 'regenerative',
     price: 280000,
-    image: '/products/nmn.png',
+    image: asset('products/nmn.png'),
     tagline: 'β-Nicotinamide Mononucleotide — Anti-aging',
     description:
       'NMN capsules for cell repair, anti-aging, better sleep, muscle recovery and stronger immunity. 40 capsules.',
@@ -110,7 +112,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 160000,
-    image: '/products/lalabuy/hypoglycemic.jpg',
+    image: asset('products/lalabuy/hypoglycemic.jpg'),
     tagline: 'Blood sugar support',
     description:
       'Helps stabilize blood sugar, activate insulin-producing cells, and support people managing type 2 diabetes symptoms.',
@@ -129,7 +131,7 @@ export const products: Product[] = [
     brand: 'Vita Source',
     category: 'regenerative',
     price: 145000,
-    image: '/products/lalabuy/beta-carotene.jpg',
+    image: asset('products/lalabuy/beta-carotene.jpg'),
     tagline: 'Antioxidant · vitamin A source',
     description:
       'Natural beta-carotene for antioxidant and anti-aging support, fertility, memory, vision and heart wellness.',
@@ -150,7 +152,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 160000,
-    image: '/products/lalabuy/propolis-lecithin.jpg',
+    image: asset('products/lalabuy/propolis-lecithin.jpg'),
     tagline: 'Metabolism · cholesterol · brain',
     description:
       'Supports fat metabolism, cholesterol balance, cell membranes, memory and diabetes-related complications.',
@@ -169,7 +171,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'herbal',
     price: 188000,
-    image: '/products/lalabuy/cordyceps.jpg',
+    image: asset('products/lalabuy/cordyceps.jpg'),
     tagline: 'Lung · immunity · respiratory',
     description:
       'Cordyceps capsules that improve lung function, boost immunity, fight respiratory infections and support heart & brain.',
@@ -189,7 +191,7 @@ export const products: Product[] = [
     brand: 'Health Way',
     category: 'regenerative',
     price: 160000,
-    image: '/products/lalabuy/calcium-iron-zinc.jpg',
+    image: asset('products/lalabuy/calcium-iron-zinc.jpg'),
     tagline: 'Bones · blood · enzymes',
     description:
       'Triple-mineral formula for bones, teeth, nerves, metabolism and immunity — helpful for pregnant and breastfeeding mothers.',
@@ -207,7 +209,7 @@ export const products: Product[] = [
     brand: 'Health Way',
     category: 'herbal',
     price: 145000,
-    image: '/products/extracted/healthy-way-herbal.png',
+    image: asset('products/extracted/healthy-way-herbal.png'),
     tagline: 'Liver & gallbladder support',
     description:
       'Herbal capsules that support gallbladder and liver function, cell repair, bowel movement and organ fat control.',
@@ -225,7 +227,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 120000,
-    image: '/products/lalabuy/calcium-powder.jpg',
+    image: asset('products/lalabuy/calcium-powder.jpg'),
     tagline: 'Strong bones for every age',
     description:
       'Calcium powder that strengthens bones and teeth, supports children\'s growth, arthritis care, appetite and pregnancy wellness.',
@@ -245,7 +247,7 @@ export const products: Product[] = [
     brand: 'Health Way',
     category: 'regenerative',
     price: 145000,
-    image: '/products/lalabuy/immune-plus.jpg',
+    image: asset('products/lalabuy/immune-plus.jpg'),
     tagline: 'Immunity · hormones · fertility',
     description:
       'Natural anti-aging capsules that balance female hormones, supply omega-3s, support the heart and promote fertility.',
@@ -266,7 +268,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'mens',
     price: 188000,
-    image: '/products/lalabuy/ginseng-cordyceps.jpg',
+    image: asset('products/lalabuy/ginseng-cordyceps.jpg'),
     tagline: 'Energy · vitality · kidney support',
     description:
       'Boosts energy and male vitality, supports kidney and heart health, and helps purify blood and fight stubborn infections.',
@@ -285,7 +287,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'coffee-tea',
     price: 150000,
-    image: '/products/lalabuy/longvigor.jpg',
+    image: asset('products/lalabuy/longvigor.jpg'),
     tagline: 'Microcirculation & male vitality',
     description:
       'Functional coffee that quickly promotes microcirculation, balances hormones and reinvigorates male vitality.',
@@ -304,7 +306,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'herbal',
     price: 3500000,
-    image: '/products/lalabuy/detox-pack.jpg',
+    image: asset('products/lalabuy/detox-pack.jpg'),
     tagline: '90-day deep cellular cleanse',
     description:
       'Complete detox set for deeper-layer detoxification — cleanses cells one by one and restores organ function in about 90 days.',
@@ -323,7 +325,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 190000,
-    image: '/products/lalabuy/gi-vital.jpg',
+    image: asset('products/lalabuy/gi-vital.jpg'),
     tagline: 'Stomach comfort & digestion',
     description:
       'Softgels that repair damaged cells, support gastric mucosa, help heal ulcers and activate cell rejuvenation.',
@@ -344,7 +346,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 210000,
-    image: '/products/lalabuy/peptides.jpg',
+    image: asset('products/lalabuy/peptides.jpg'),
     tagline: 'Instant energy · protein source',
     description:
       'Protein-rich peptides for instant energy, anti-fatigue strength, better memory, heart support and liver protection.',
@@ -363,7 +365,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'devices',
     price: 340000,
-    image: '/products/lalabuy/energy-bracelet.jpg',
+    image: asset('products/lalabuy/energy-bracelet.jpg'),
     tagline: 'Circulation · stress · EMF balance',
     description:
       'Wearable bracelet that helps suppress stress hormones, neutralize EMF, improve circulation and support stroke recovery.',
@@ -382,7 +384,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'coffee-tea',
     price: 60000,
-    image: '/products/lalabuy/cordyceps-coffee.jpg',
+    image: asset('products/lalabuy/cordyceps-coffee.jpg'),
     tagline: 'Respiratory · detox · calm focus',
     description:
       'Cordyceps coffee that supports respiration, detox, stress relief, memory and immunity — suitable for many BP and diabetes concerns.',
@@ -401,7 +403,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'regenerative',
     price: 160000,
-    image: '/products/lalabuy/vision-vitale.jpg',
+    image: asset('products/lalabuy/vision-vitale.jpg'),
     tagline: 'Eye cell repair & clarity',
     description:
       'Vision supplement that repairs eye cells and supports sight loss, myopia, cataracts, retinopathy and eye fatigue.',
@@ -420,7 +422,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'womens',
     price: 30000,
-    image: '/products/lalabuy/anion-liner.jpg',
+    image: asset('products/lalabuy/anion-liner.jpg'),
     tagline: 'Hormone balance · odor control',
     description:
       'Anion panty liners that help balance hormones, reduce odor, support UTI care and promote oxygen supply to the womb.',
@@ -439,7 +441,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'womens',
     price: 25000,
-    image: '/products/lalabuy/anion-napkin.jpg',
+    image: asset('products/lalabuy/anion-napkin.jpg'),
     tagline: '7-layer breathable protection',
     description:
       'Heavy-absorption sanitary napkins with a 7-layer breathable design, odor control and menstrual-pain relief.',
@@ -458,7 +460,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'coffee-tea',
     price: 60000,
-    image: '/products/lalabuy/kuding-tea.jpg',
+    image: asset('products/lalabuy/kuding-tea.jpg'),
     tagline: 'Detox · focus · weight support',
     description:
       'Herbal tea that detoxifies, improves bowel movement, focus and circulation, and supports weight and cholesterol balance.',
@@ -478,7 +480,7 @@ export const products: Product[] = [
     brand: 'Nouripad',
     category: 'womens',
     price: 180000,
-    image: '/products/lalabuy/female-nouripad.jpg',
+    image: asset('products/lalabuy/female-nouripad.jpg'),
     tagline: 'Reproductive detox & fertility',
     description:
       'Female care pad that detoxifies the reproductive tract, supports infection and fibroid wellness, hormones and fertility.',
@@ -497,7 +499,7 @@ export const products: Product[] = [
     brand: 'Nouripad',
     category: 'mens',
     price: 180000,
-    image: '/products/lalabuy/male-nouripad.jpg',
+    image: asset('products/lalabuy/male-nouripad.jpg'),
     tagline: 'Prostate · stamina · libido',
     description:
       'Male care pad for prostate health, smoother urination, energy, libido, sperm count and chronic UTI support.',
@@ -516,7 +518,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'beauty',
     price: 30000,
-    image: '/products/lalabuy/toothpaste.jpg',
+    image: asset('products/lalabuy/toothpaste.jpg'),
     tagline: '100% herbal oral care',
     description:
       '100% herbal toothpaste that whitens teeth, soothes gums, removes plaque and supports mouth ulcers and bad breath.',
@@ -535,7 +537,7 @@ export const products: Product[] = [
     brand: 'Norland',
     category: 'mens',
     price: 145000,
-    image: '/products/lalabuy/immune-vitale.jpg',
+    image: asset('products/lalabuy/immune-vitale.jpg'),
     tagline: 'Immunity · kidney · vitality',
     description:
       'Immune support capsules for kidney wellness, prostate health, fertility and erectile function.',
@@ -554,7 +556,7 @@ export const products: Product[] = [
     brand: 'Health Way',
     category: 'devices',
     price: 450000,
-    image: '/products/lalabuy/alkaline-cup.jpg',
+    image: asset('products/lalabuy/alkaline-cup.jpg'),
     tagline: 'pH balance · daily hydration',
     description:
       'Alkaline cup that balances minerals and body pH, boosts immunity, relieves fatigue and supports healthy aging.',
@@ -574,7 +576,7 @@ export const products: Product[] = [
     brand: 'Nouripad',
     category: 'beauty',
     price: 30000,
-    image: '/products/womens-wellness.png',
+    image: asset('products/womens-wellness.png'),
     tagline: 'Soft · Smooth · 30 PCS',
     description:
       'Soft, smooth feminine liners for daily comfort and a healthier glow as part of women’s wellness care. 30 pieces.',
@@ -594,7 +596,7 @@ export const products: Product[] = [
     brand: 'Risen Care',
     category: 'devices',
     price: 350000,
-    image: '/products/therapy-device.png',
+    image: asset('products/therapy-device.png'),
     tagline: 'TENS / EMS pain relief & massage',
     description:
       'Handheld therapy device with dual-channel intensity, massage/cupping modes and timer for pain relief and muscle recovery.',

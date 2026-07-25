@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {
   Heart,
   LogIn,
@@ -28,6 +28,7 @@ const listedLinks = [
 ]
 
 export function Header() {
+  const navigate = useNavigate()
   const { cartCount, wishlist, setCartOpen } = useStore()
   const { isAuthenticated, user } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -196,7 +197,8 @@ export function Header() {
             style={{ margin: 0 }}
             onSubmit={(e) => {
               e.preventDefault()
-              window.location.href = `/shop?q=${encodeURIComponent(query)}`
+              navigate(`/shop?q=${encodeURIComponent(query)}`)
+              setSearchOpen(false)
             }}
           >
             <input

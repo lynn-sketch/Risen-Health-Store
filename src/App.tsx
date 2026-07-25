@@ -27,7 +27,7 @@ export default function App() {
   return (
     <AuthProvider>
       <StoreProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '') || undefined}>
           <Header />
           <main>
             <Routes>

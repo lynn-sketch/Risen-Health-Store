@@ -477,7 +477,7 @@ p {
   inset: 0;
   background:
     linear-gradient(105deg, rgba(20, 61, 88, 0.82) 0%, rgba(27, 79, 114, 0.55) 48%, rgba(27, 79, 114, 0.22) 100%),
-    url('/products/womens-wellness.png') center/cover no-repeat;
+    var(--img-womens-wellness) center/cover no-repeat;
 }
 
 .hero-media::after {
@@ -821,7 +821,7 @@ p {
 .spotlight-visual {
   position: relative;
   min-height: 420px;
-  background: url('/products/womens-wellness.png') center/cover;
+  background: var(--img-womens-wellness) center/cover;
   border: 1px solid rgba(27, 79, 114, 0.08);
 }
 
