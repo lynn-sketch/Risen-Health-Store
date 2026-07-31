@@ -1,10 +1,10 @@
 import { useState, type FormEvent } from 'react'
 import { Link, Navigate, useNavigate, useSearchParams } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext'
+import { ADMIN_EMAIL, useAuth } from '../context/AuthContext'
 import { ShieldCheck } from 'lucide-react'
 
 export function Login() {
-  const { login, isAuthenticated } = useAuth()
+  const { login, isAuthenticated, isAdmin } = useAuth()
   const [params] = useSearchParams()
   const navigate = useNavigate()
   const next = params.get('next') || '/checkout'
@@ -15,7 +15,7 @@ export function Login() {
   const [loading, setLoading] = useState(false)
 
   if (isAuthenticated) {
-    return <Navigate to={next} replace />
+    return <Navigate to={isAdmin ? (next.startsWith('/admin') ? next : '/admin') : next} replace />
   }
 
   const onSubmit = async (e: FormEvent) => {
@@ -28,7 +28,9 @@ export function Login() {
       setError(res.error)
       return
     }
-    navigate(next, { replace: true })
+    const goAdmin =
+      email.trim().toLowerCase() === ADMIN_EMAIL || next.startsWith('/admin')
+    navigate(goAdmin ? '/admin' : next, { replace: true })
   }
 
   return (

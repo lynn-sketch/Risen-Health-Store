@@ -3,12 +3,14 @@ import { CartDrawer } from './components/CartDrawer'
 import { CompareBar } from './components/CompareBar'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { RequireAdmin } from './components/RequireAdmin'
 import { RequireAuth } from './components/RequireAuth'
 import { WhatsAppButton } from './components/WhatsAppButton'
 import { AuthProvider } from './context/AuthContext'
 import { StoreProvider } from './context/StoreContext'
 import { About } from './pages/About'
 import { Account } from './pages/Account'
+import { Admin } from './pages/Admin'
 import { Assessment } from './pages/Assessment'
 import { Checkout } from './pages/Checkout'
 import { Compare } from './pages/Compare'
@@ -42,6 +44,14 @@ export default function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/account" element={<Account />} />
+              <Route
+                path="/admin"
+                element={
+                  <RequireAdmin>
+                    <Admin />
+                  </RequireAdmin>
+                }
+              />
               <Route
                 path="/checkout"
                 element={

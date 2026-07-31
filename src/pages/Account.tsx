@@ -3,13 +3,17 @@ import { Link, Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export function Account() {
-  const { user, isAuthenticated, logout, updateProfile } = useAuth()
+  const { user, isAuthenticated, isAdmin, logout, updateProfile } = useAuth()
   const [name, setName] = useState(user?.name || '')
   const [phone, setPhone] = useState(user?.phone || '')
   const [saved, setSaved] = useState(false)
 
   if (!isAuthenticated || !user) {
     return <Navigate to="/login?next=/account" replace />
+  }
+
+  if (isAdmin) {
+    return <Navigate to="/admin" replace />
   }
 
   const onSave = (e: FormEvent) => {

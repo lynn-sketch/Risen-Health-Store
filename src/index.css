@@ -1974,3 +1974,119 @@ p {
     display: none;
   }
 }
+
+/* Admin */
+.admin-note {
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  background: rgba(225, 163, 42, 0.12);
+  border: 1px solid rgba(225, 163, 42, 0.35);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--white);
+  border: 1px solid rgba(74, 127, 165, 0.12);
+}
+
+.admin-stat strong {
+  display: block;
+  font-size: 1.35rem;
+  color: var(--navy);
+  font-family: var(--font-display);
+}
+
+.admin-stat span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.admin-tabs button {
+  border: 1px solid rgba(74, 127, 165, 0.2);
+  background: var(--white);
+  color: var(--navy);
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-tabs button.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 0.7rem 0.55rem;
+  border-bottom: 1px solid rgba(74, 127, 165, 0.12);
+  vertical-align: top;
+}
+
+.admin-table th {
+  color: var(--navy);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-table select {
+  padding: 0.35rem 0.45rem;
+  border: 1px solid rgba(74, 127, 165, 0.25);
+  background: var(--white);
+}
+
+.admin-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: rgba(74, 127, 165, 0.12);
+  color: var(--navy);
+}
+
+.admin-badge.status-confirmed {
+  background: rgba(42, 157, 143, 0.15);
+  color: #1f7a6e;
+}
+
+.admin-badge.status-delivered {
+  background: rgba(42, 157, 143, 0.25);
+  color: #155e54;
+}
+
+.admin-badge.status-cancelled {
+  background: rgba(220, 53, 69, 0.12);
+  color: var(--danger);
+}

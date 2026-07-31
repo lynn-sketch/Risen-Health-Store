@@ -30,7 +30,7 @@ const listedLinks = [
 export function Header() {
   const navigate = useNavigate()
   const { cartCount, wishlist, setCartOpen } = useStore()
-  const { isAuthenticated, user } = useAuth()
+  const { isAuthenticated, isAdmin, user } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState('')
@@ -87,8 +87,8 @@ export function Header() {
             </NavLink>
           ))}
           {isAuthenticated ? (
-            <NavLink to="/account" onClick={closeMenu}>
-              My Account
+            <NavLink to={isAdmin ? '/admin' : '/account'} onClick={closeMenu}>
+              {isAdmin ? 'Admin dashboard' : 'My Account'}
             </NavLink>
           ) : (
             <NavLink to="/login?reason=order" onClick={closeMenu}>
@@ -167,11 +167,11 @@ export function Header() {
           </button>
           {isAuthenticated ? (
             <Link
-              to="/account"
+              to={isAdmin ? '/admin' : '/account'}
               className="btn btn-outline auth-header-btn"
               title={user?.name}
             >
-              <UserRound size={16} /> Account
+              <UserRound size={16} /> {isAdmin ? 'Admin' : 'Account'}
             </Link>
           ) : (
             <Link to="/signup?next=/checkout" className="btn btn-primary auth-header-btn">

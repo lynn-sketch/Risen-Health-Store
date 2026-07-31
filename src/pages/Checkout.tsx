@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle } from 'lucide-react'
+import { addOrder } from '../data/orders'
 import { formatUSD } from '../data/products'
 import { useAuth } from '../context/AuthContext'
 import { buildWhatsAppOrder, useStore, WHATSAPP_NUMBERS } from '../context/StoreContext'
@@ -33,6 +34,23 @@ export function Checkout() {
     )
   }
 
+  const recordOrder = () => {
+    addOrder({
+      customerName: name || user?.name || 'Customer',
+      customerEmail: user?.email || '',
+      customerPhone: phone || user?.phone || '',
+      area,
+      notes,
+      items: cart.map((i) => ({
+        productId: i.product.id,
+        name: i.product.name,
+        qty: i.qty,
+        price: i.product.price,
+      })),
+      total: cartTotal,
+    })
+  }
+
   const openWhatsApp = () => {
     const lines = cart.map(
       (i) => `• ${i.product.name} × ${i.qty} — ${formatUSD(i.product.price * i.qty)}`,
@@ -55,6 +73,7 @@ export function Checkout() {
       .filter(Boolean)
       .join('\n')
 
+    recordOrder()
     window.open(
       `https://wa.me/${WHATSAPP_NUMBERS.primary}?text=${encodeURIComponent(message)}`,
       '_blank',
@@ -162,6 +181,7 @@ export function Checkout() {
               target="_blank"
               rel="noreferrer"
               onClick={() => {
+                recordOrder()
                 setSent(true)
                 clearCart()
               }}
