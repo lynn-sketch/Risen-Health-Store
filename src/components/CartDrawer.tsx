@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Minus, Plus, Trash2, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { formatUGX } from '../data/products'
+import { formatUSD } from '../data/products'
 import { useAuth } from '../context/AuthContext'
 import { buildWhatsAppOrder, useStore } from '../context/StoreContext'
 
@@ -60,7 +60,7 @@ export function CartDrawer() {
                 <div>
                   <strong>{item.product.name}</strong>
                   <div style={{ color: 'var(--muted)', fontSize: '0.85rem' }}>
-                    {formatUGX(item.product.price)}
+                    {formatUSD(item.product.price)}
                   </div>
                   <div className="qty-ctrl">
                     <button
@@ -94,7 +94,7 @@ export function CartDrawer() {
           <div className="drawer-foot">
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span>Total</span>
-              <strong>{formatUGX(cartTotal)}</strong>
+              <strong>{formatUSD(cartTotal)}</strong>
             </div>
             {!isAuthenticated && (
               <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--muted)' }}>

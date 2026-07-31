@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { formatUGX, getProduct, type Product } from '../data/products'
+import { formatUSD, getProduct, type Product } from '../data/products'
 
 const KEY = 'rhs-recent'
 
@@ -45,7 +45,7 @@ export function RecentlyViewed({ excludeId }: { excludeId?: string }) {
             <div className="product-body">
               <span className="product-brand">{p.brand}</span>
               <h3>{p.name}</h3>
-              <span className="price">{formatUGX(p.price)}</span>
+              <span className="price">{formatUSD(p.price)}</span>
             </div>
           </Link>
         ))}

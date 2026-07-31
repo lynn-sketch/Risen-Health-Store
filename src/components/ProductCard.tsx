@@ -1,7 +1,7 @@
 import { Heart, GitCompareArrows, ShoppingBag, Truck } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Product } from '../data/products'
-import { formatUGX } from '../data/products'
+import { formatUSD } from '../data/products'
 import { useStore } from '../context/StoreContext'
 import { useRequireAuthAction } from '../hooks/useRequireAuthAction'
 
@@ -53,7 +53,7 @@ export function ProductCard({ product }: { product: Product }) {
           <Truck size={13} /> Fast Kampala delivery
         </div>
         <div className="product-meta">
-          <span className="price">{formatUGX(product.price)}</span>
+          <span className="price">{formatUSD(product.price)}</span>
           <button
             type="button"
             className="btn btn-secondary"

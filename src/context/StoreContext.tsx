@@ -144,15 +144,24 @@ export function useStore() {
   return ctx
 }
 
+/** WhatsApp always uses `primary`. Other numbers are call/display contacts only. */
 export const WHATSAPP_NUMBERS = {
   primary: '256787770484',
   secondary: '256754770484',
-  display: ['0787770484', '0754770484'],
+  tertiary: '256781317468',
+  display: ['0787770484', '0754770484', '0781317468'] as const,
+  tel: ['256787770484', '256754770484', '256781317468'] as const,
 }
 
 export function buildWhatsAppOrder(cart: CartItem[], total: number): string {
+  const money = (n: number) =>
+    new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(n)
   const lines = cart.map(
-    (i) => `• ${i.product.name} × ${i.qty} — UGX ${(i.product.price * i.qty).toLocaleString()}`,
+    (i) => `• ${i.product.name} × ${i.qty} — ${money(i.product.price * i.qty)}`,
   )
   const message = [
     'Hello Risen Health Store!',
@@ -160,7 +169,7 @@ export function buildWhatsAppOrder(cart: CartItem[], total: number): string {
     '',
     ...lines,
     '',
-    `Total: UGX ${total.toLocaleString()}`,
+    `Total: ${money(total)}`,
     '',
     'Please confirm availability and delivery.',
   ].join('\n')

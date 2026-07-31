@@ -67,7 +67,7 @@ export function Shop() {
         <div className="page-hero">
           <h1>Shop All Products</h1>
           <p style={{ color: 'var(--muted)', maxWidth: '52ch' }}>
-            Clear product photos · UGX pricing · WhatsApp checkout · curated by Sylivia Wanga
+            Clear product photos · USD pricing · WhatsApp checkout · curated by Sylivia Wanga
           </p>
         </div>
 

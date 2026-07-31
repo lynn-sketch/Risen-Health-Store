@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle } from 'lucide-react'
-import { formatUGX } from '../data/products'
+import { formatUSD } from '../data/products'
 import { useAuth } from '../context/AuthContext'
 import { buildWhatsAppOrder, useStore, WHATSAPP_NUMBERS } from '../context/StoreContext'
 
@@ -35,7 +35,7 @@ export function Checkout() {
 
   const openWhatsApp = () => {
     const lines = cart.map(
-      (i) => `• ${i.product.name} × ${i.qty} — ${formatUGX(i.product.price * i.qty)}`,
+      (i) => `• ${i.product.name} × ${i.qty} — ${formatUSD(i.product.price * i.qty)}`,
     )
     const message = [
       'Hello Risen Health Store!',
@@ -48,7 +48,7 @@ export function Checkout() {
       'Order:',
       ...lines,
       '',
-      `Total: ${formatUGX(cartTotal)}`,
+      `Total: ${formatUSD(cartTotal)}`,
       '',
       'Please confirm payment (MTN/Airtel) and delivery.',
     ]
@@ -187,7 +187,7 @@ export function Checkout() {
               <span>
                 {i.product.name} × {i.qty}
               </span>
-              <strong>{formatUGX(i.product.price * i.qty)}</strong>
+              <strong>{formatUSD(i.product.price * i.qty)}</strong>
             </div>
           ))}
           <div
@@ -199,7 +199,7 @@ export function Checkout() {
             }}
           >
             <span>Total</span>
-            <strong>{formatUGX(cartTotal)}</strong>
+            <strong>{formatUSD(cartTotal)}</strong>
           </div>
           <p style={{ color: 'var(--muted)', fontSize: '0.82rem', marginTop: '0.75rem' }}>
             Pay via MTN MoMo or Airtel Money after Sylivia confirms on WhatsApp.

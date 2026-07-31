@@ -42,7 +42,7 @@ export const products: Product[] = [
     name: 'Norland Fish Oil',
     brand: 'Vmax',
     category: 'regenerative',
-    price: 145000,
+    price: 39,
     image: asset('products/fish-oil.png'),
     tagline: 'Omega 3 · 6 · 9 — Not Fortified',
     description:
@@ -66,7 +66,7 @@ export const products: Product[] = [
     name: 'Norland Seabuckthorn Oil',
     brand: 'Vmax',
     category: 'regenerative',
-    price: 155000,
+    price: 42,
     image: asset('products/seabuckthorn.png'),
     tagline: 'Omega 3·6·7·9 · Vitamins C, E & A',
     description:
@@ -88,7 +88,7 @@ export const products: Product[] = [
     name: 'Vmax NMN Capsules',
     brand: 'Vmax',
     category: 'regenerative',
-    price: 280000,
+    price: 76,
     image: asset('products/nmn.png'),
     tagline: 'β-Nicotinamide Mononucleotide — Anti-aging',
     description:
@@ -111,7 +111,7 @@ export const products: Product[] = [
     name: 'Hypoglycemic Capsules',
     brand: 'Norland',
     category: 'regenerative',
-    price: 160000,
+    price: 43,
     image: asset('products/lalabuy/hypoglycemic.jpg'),
     tagline: 'Blood sugar support',
     description:
@@ -130,7 +130,7 @@ export const products: Product[] = [
     name: 'Natural B-Carotene',
     brand: 'Vita Source',
     category: 'regenerative',
-    price: 145000,
+    price: 39,
     image: asset('products/lalabuy/beta-carotene.jpg'),
     tagline: 'Antioxidant · vitamin A source',
     description:
@@ -151,7 +151,7 @@ export const products: Product[] = [
     name: 'Propolis Lecithin Capsules',
     brand: 'Norland',
     category: 'regenerative',
-    price: 160000,
+    price: 43,
     image: asset('products/lalabuy/propolis-lecithin.jpg'),
     tagline: 'Metabolism · cholesterol · brain',
     description:
@@ -170,7 +170,7 @@ export const products: Product[] = [
     name: 'Cordyceps-Sinensis Capsules',
     brand: 'Norland',
     category: 'herbal',
-    price: 188000,
+    price: 51,
     image: asset('products/lalabuy/cordyceps.jpg'),
     tagline: 'Lung · immunity · respiratory',
     description:
@@ -190,7 +190,7 @@ export const products: Product[] = [
     name: 'Calcium, Iron & Zinc',
     brand: 'Health Way',
     category: 'regenerative',
-    price: 160000,
+    price: 43,
     image: asset('products/lalabuy/calcium-iron-zinc.jpg'),
     tagline: 'Bones · blood · enzymes',
     description:
@@ -208,7 +208,7 @@ export const products: Product[] = [
     name: 'Healthy Way Herbal Capsules',
     brand: 'Health Way',
     category: 'herbal',
-    price: 145000,
+    price: 39,
     image: asset('products/extracted/healthy-way-herbal.png'),
     tagline: 'Liver & gallbladder support',
     description:
@@ -226,7 +226,7 @@ export const products: Product[] = [
     name: 'Nutrient Calcium Powder',
     brand: 'Norland',
     category: 'regenerative',
-    price: 120000,
+    price: 32,
     image: asset('products/lalabuy/calcium-powder.jpg'),
     tagline: 'Strong bones for every age',
     description:
@@ -246,7 +246,7 @@ export const products: Product[] = [
     name: 'Immune+ Capsules',
     brand: 'Health Way',
     category: 'regenerative',
-    price: 145000,
+    price: 39,
     image: asset('products/lalabuy/immune-plus.jpg'),
     tagline: 'Immunity · hormones · fertility',
     description:
@@ -267,7 +267,7 @@ export const products: Product[] = [
     name: 'Ginseng Cordyceps-Sinensis',
     brand: 'Norland',
     category: 'mens',
-    price: 188000,
+    price: 51,
     image: asset('products/lalabuy/ginseng-cordyceps.jpg'),
     tagline: 'Energy · vitality · kidney support',
     description:
@@ -286,7 +286,7 @@ export const products: Product[] = [
     name: 'Longvigor Coffee',
     brand: 'Norland',
     category: 'coffee-tea',
-    price: 150000,
+    price: 41,
     image: asset('products/lalabuy/longvigor.jpg'),
     tagline: 'Microcirculation & male vitality',
     description:
@@ -305,7 +305,7 @@ export const products: Product[] = [
     name: 'Detox Pack (1 Set)',
     brand: 'Norland',
     category: 'herbal',
-    price: 3500000,
+    price: 946,
     image: asset('products/lalabuy/detox-pack.jpg'),
     tagline: '90-day deep cellular cleanse',
     description:
@@ -324,7 +324,7 @@ export const products: Product[] = [
     name: 'GI Vital Softgel',
     brand: 'Norland',
     category: 'regenerative',
-    price: 190000,
+    price: 51,
     image: asset('products/lalabuy/gi-vital.jpg'),
     tagline: 'Stomach comfort & digestion',
     description:
@@ -345,7 +345,7 @@ export const products: Product[] = [
     name: 'Micro-Molecule Peptides',
     brand: 'Norland',
     category: 'regenerative',
-    price: 210000,
+    price: 57,
     image: asset('products/lalabuy/peptides.jpg'),
     tagline: 'Instant energy · protein source',
     description:
@@ -364,7 +364,7 @@ export const products: Product[] = [
     name: 'Energy Bracelet',
     brand: 'Norland',
     category: 'devices',
-    price: 340000,
+    price: 92,
     image: asset('products/lalabuy/energy-bracelet.jpg'),
     tagline: 'Circulation · stress · EMF balance',
     description:
@@ -383,7 +383,7 @@ export const products: Product[] = [
     name: 'Cordyceps Coffee',
     brand: 'Norland',
     category: 'coffee-tea',
-    price: 60000,
+    price: 16,
     image: asset('products/lalabuy/cordyceps-coffee.jpg'),
     tagline: 'Respiratory · detox · calm focus',
     description:
@@ -402,7 +402,7 @@ export const products: Product[] = [
     name: 'Vision Vitale',
     brand: 'Norland',
     category: 'regenerative',
-    price: 160000,
+    price: 43,
     image: asset('products/lalabuy/vision-vitale.jpg'),
     tagline: 'Eye cell repair & clarity',
     description:
@@ -421,7 +421,7 @@ export const products: Product[] = [
     name: 'Anion Panty Liners',
     brand: 'Norland',
     category: 'womens',
-    price: 30000,
+    price: 8,
     image: asset('products/lalabuy/anion-liner.jpg'),
     tagline: 'Hormone balance · odor control',
     description:
@@ -440,7 +440,7 @@ export const products: Product[] = [
     name: 'Anion Sanitary Napkins',
     brand: 'Norland',
     category: 'womens',
-    price: 25000,
+    price: 7,
     image: asset('products/lalabuy/anion-napkin.jpg'),
     tagline: '7-layer breathable protection',
     description:
@@ -459,7 +459,7 @@ export const products: Product[] = [
     name: 'Kuding Tea',
     brand: 'Norland',
     category: 'coffee-tea',
-    price: 60000,
+    price: 16,
     image: asset('products/lalabuy/kuding-tea.jpg'),
     tagline: 'Detox · focus · weight support',
     description:
@@ -479,7 +479,7 @@ export const products: Product[] = [
     name: 'Female Nouripad',
     brand: 'Nouripad',
     category: 'womens',
-    price: 180000,
+    price: 49,
     image: asset('products/lalabuy/female-nouripad.jpg'),
     tagline: 'Reproductive detox & fertility',
     description:
@@ -498,7 +498,7 @@ export const products: Product[] = [
     name: 'Male Nouripad',
     brand: 'Nouripad',
     category: 'mens',
-    price: 180000,
+    price: 49,
     image: asset('products/lalabuy/male-nouripad.jpg'),
     tagline: 'Prostate · stamina · libido',
     description:
@@ -517,7 +517,7 @@ export const products: Product[] = [
     name: 'Sunlight Herbal Toothpaste',
     brand: 'Norland',
     category: 'beauty',
-    price: 30000,
+    price: 8,
     image: asset('products/lalabuy/toothpaste.jpg'),
     tagline: '100% herbal oral care',
     description:
@@ -536,7 +536,7 @@ export const products: Product[] = [
     name: 'Immune Vitale',
     brand: 'Norland',
     category: 'mens',
-    price: 145000,
+    price: 39,
     image: asset('products/lalabuy/immune-vitale.jpg'),
     tagline: 'Immunity · kidney · vitality',
     description:
@@ -555,7 +555,7 @@ export const products: Product[] = [
     name: 'Healthy Way Alkaline Cup',
     brand: 'Health Way',
     category: 'devices',
-    price: 450000,
+    price: 122,
     image: asset('products/lalabuy/alkaline-cup.jpg'),
     tagline: 'pH balance · daily hydration',
     description:
@@ -575,7 +575,7 @@ export const products: Product[] = [
     name: 'Anti-Pigmenty Liner',
     brand: 'Nouripad',
     category: 'beauty',
-    price: 30000,
+    price: 8,
     image: asset('products/womens-wellness.png'),
     tagline: 'Soft · Smooth · 30 PCS',
     description:
@@ -595,7 +595,7 @@ export const products: Product[] = [
     name: 'Low & Medium Frequency Therapy Device',
     brand: 'Risen Care',
     category: 'devices',
-    price: 350000,
+    price: 95,
     image: asset('products/therapy-device.png'),
     tagline: 'TENS / EMS pain relief & massage',
     description:
@@ -612,8 +612,12 @@ export const products: Product[] = [
   },
 ]
 
-export function formatUGX(amount: number): string {
-  return `UGX ${amount.toLocaleString('en-UG')}`
+export function formatUSD(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  }).format(amount)
 }
 
 export function getProduct(id: string): Product | undefined {

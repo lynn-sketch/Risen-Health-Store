@@ -120,15 +120,19 @@ export function Header() {
               WhatsApp Order
             </a>
             {' · '}
-            <a href={`tel:+${WHATSAPP_NUMBERS.primary}`}>
+            <a href={`tel:+${WHATSAPP_NUMBERS.tel[0]}`}>
               <Phone size={12} style={{ verticalAlign: -1 }} /> {WHATSAPP_NUMBERS.display[0]}
             </a>
             {' / '}
-            <a href={`tel:+${WHATSAPP_NUMBERS.secondary}`}>
+            <a href={`tel:+${WHATSAPP_NUMBERS.tel[1]}`}>
               {WHATSAPP_NUMBERS.display[1]}
             </a>
+            {' / '}
+            <a href={`tel:+${WHATSAPP_NUMBERS.tel[2]}`}>
+              {WHATSAPP_NUMBERS.display[2]}
+            </a>
             {' · '}
-            <strong style={{ color: 'var(--gold-light)' }}>UGX</strong>
+            <strong style={{ color: 'var(--gold-light)' }}>USD</strong>
           </span>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { formatUGX, getProduct } from '../data/products'
+import { formatUSD, getProduct } from '../data/products'
 import { useStore } from '../context/StoreContext'
 
 export function Compare() {
@@ -45,7 +45,7 @@ export function Compare() {
             <tbody>
               {[
                 ['Brand', (p: NonNullable<(typeof items)[0]>) => p.brand],
-                ['Price', (p: NonNullable<(typeof items)[0]>) => formatUGX(p.price)],
+                ['Price', (p: NonNullable<(typeof items)[0]>) => formatUSD(p.price)],
                 ['Category', (p: NonNullable<(typeof items)[0]>) => p.category],
                 ['Stock', (p: NonNullable<(typeof items)[0]>) => `${p.stock} available`],
                 ['Tagline', (p: NonNullable<(typeof items)[0]>) => p.tagline],

@@ -19,8 +19,8 @@ export function Delivery() {
           <p>MTN Mobile Money, Airtel Money, or cash on delivery (Kampala, selected areas).</p>
           <h3>Questions?</h3>
           <p>
-            Call or WhatsApp Sylivia: {WHATSAPP_NUMBERS.display[0]} /{' '}
-            {WHATSAPP_NUMBERS.display[1]}
+            Call Sylivia: {WHATSAPP_NUMBERS.display.join(' / ')}. WhatsApp orders:{' '}
+            {WHATSAPP_NUMBERS.display[0]}
           </p>
         </div>
       </div>

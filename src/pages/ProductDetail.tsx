@@ -3,7 +3,7 @@ import { Check, Heart, ShoppingBag, Truck } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { ProductCard } from '../components/ProductCard'
 import { RecentlyViewed, trackView } from '../components/RecentlyViewed'
-import { formatUGX, getProduct, products } from '../data/products'
+import { formatUSD, getProduct, products } from '../data/products'
 import { useAuth } from '../context/AuthContext'
 import { useStore, WHATSAPP_NUMBERS } from '../context/StoreContext'
 import { useRequireAuthAction } from '../hooks/useRequireAuthAction'
@@ -34,7 +34,7 @@ export function ProductDetail() {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 4)
   const wished = isWishlisted(product.id)
-  const wa = `https://wa.me/${WHATSAPP_NUMBERS.primary}?text=${encodeURIComponent(`Hi! I'm interested in ${product.name} (${formatUGX(product.price)}). Is it available?`)}`
+  const wa = `https://wa.me/${WHATSAPP_NUMBERS.primary}?text=${encodeURIComponent(`Hi! I'm interested in ${product.name} (${formatUSD(product.price)}). Is it available?`)}`
 
   return (
     <section className="section" style={{ paddingTop: '2rem' }}>
@@ -53,7 +53,7 @@ export function ProductDetail() {
             </h1>
             <p style={{ color: 'var(--muted)' }}>{product.tagline}</p>
             <p className="price" style={{ fontSize: '1.5rem', margin: '1rem 0' }}>
-              {formatUGX(product.price)}
+              {formatUSD(product.price)}
             </p>
             <div className="delivery-line" style={{ marginBottom: '0.75rem' }}>
               <Truck size={14} /> Fast Kampala delivery · Mobile Money accepted

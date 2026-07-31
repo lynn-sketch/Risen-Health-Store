@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MessageCircle, PanelLeft, ShoppingBag, Truck } from 'lucide-react'
 import { ShopSidebar } from '../components/ShopSidebar'
-import { CATEGORIES, formatUGX, products, type Category } from '../data/products'
+import { CATEGORIES, formatUSD, products, type Category } from '../data/products'
 import { useAuth } from '../context/AuthContext'
 import { useStore, WHATSAPP_NUMBERS } from '../context/StoreContext'
 import { useRequireAuthAction } from '../hooks/useRequireAuthAction'
@@ -39,7 +39,7 @@ export function Order() {
   }, [category, brand, maxPrice, onlyBest, inStock, query])
 
   const orderWhatsApp = (name: string, price: number) => {
-    const msg = `Hello Risen Health Store! I want to order: ${name} — ${formatUGX(price)}. Please confirm availability.`
+    const msg = `Hello Risen Health Store! I want to order: ${name} — ${formatUSD(price)}. Please confirm availability.`
     return `https://wa.me/${WHATSAPP_NUMBERS.primary}?text=${encodeURIComponent(msg)}`
   }
 
@@ -127,7 +127,7 @@ export function Order() {
                       ))}
                     </ul>
                     <div className="order-row-actions">
-                      <strong className="price">{formatUGX(p.price)}</strong>
+                      <strong className="price">{formatUSD(p.price)}</strong>
                       {p.bestSeller && <span className="badge">Best Seller</span>}
                       <button
                         type="button"

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import {
   CATEGORIES,
-  formatUGX,
+  formatUSD,
   getBestSellers,
   products,
   type Category,
@@ -114,7 +114,7 @@ export function ShopSidebar({
           value={maxPrice}
           onChange={(e) => onMaxPrice(Number(e.target.value))}
         />
-        <div className="sidebar-price-label">Up to {formatUGX(maxPrice)}</div>
+        <div className="sidebar-price-label">Up to {formatUSD(maxPrice)}</div>
       </div>
 
       <div className="sidebar-block">
@@ -126,7 +126,7 @@ export function ShopSidebar({
                 <img src={p.image} alt="" />
                 <div>
                   <strong>{p.name}</strong>
-                  <span>{formatUGX(p.price)}</span>
+                  <span>{formatUSD(p.price)}</span>
                 </div>
               </Link>
             </li>

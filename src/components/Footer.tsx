@@ -18,9 +18,9 @@ export function Footer() {
             for families who invest in lasting vitality.
           </p>
           <p style={{ marginBottom: 0 }}>
-            📞 {WHATSAPP_NUMBERS.display[0]} · {WHATSAPP_NUMBERS.display[1]}
+            📞 {WHATSAPP_NUMBERS.display.join(' · ')}
             <br />
-            💬 WhatsApp orders welcome
+            💬 WhatsApp orders: {WHATSAPP_NUMBERS.display[0]}
           </p>
         </div>
         <div>

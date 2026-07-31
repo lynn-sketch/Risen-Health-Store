@@ -13,12 +13,15 @@ export function About() {
             and Vmax products with trusted guidance — not guesswork.
           </p>
           <div className="contact-chips">
-            <a className="contact-chip" href={`tel:+${WHATSAPP_NUMBERS.primary}`}>
-              <Phone size={16} /> {WHATSAPP_NUMBERS.display[0]}
-            </a>
-            <a className="contact-chip" href={`tel:+${WHATSAPP_NUMBERS.secondary}`}>
-              <Phone size={16} /> {WHATSAPP_NUMBERS.display[1]}
-            </a>
+            {WHATSAPP_NUMBERS.display.map((num, i) => (
+              <a
+                key={num}
+                className="contact-chip"
+                href={`tel:+${WHATSAPP_NUMBERS.tel[i]}`}
+              >
+                <Phone size={16} /> {num}
+              </a>
+            ))}
             <a
               className="contact-chip"
               href={`https://wa.me/${WHATSAPP_NUMBERS.primary}`}
@@ -53,7 +56,7 @@ export function About() {
               'Personal recommendations via Health Quiz + WhatsApp',
               'Mobile money friendly payments',
               'Wishlist, compare and saved cart on your device',
-              'Clear UGX pricing and stock visibility',
+              'Clear USD pricing and stock visibility',
             ].map((item) => (
               <li key={item}>
                 <span style={{ color: 'var(--gold-dim)', fontWeight: 800 }}>✓</span>
