@@ -48,8 +48,8 @@ export function Admin() {
         </div>
 
         <div className="admin-note">
-          Orders and customer accounts are saved in this device’s browser. For a shared
-          store-wide admin view across phones, a server database would be needed later.
+          Keep your admin login private. This dashboard is for store management on this
+          device.
         </div>
 
         <div className="admin-stats">

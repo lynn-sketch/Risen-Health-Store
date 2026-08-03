@@ -47,7 +47,7 @@ const USERS_KEY = 'rhs-users'
 const SESSION_KEY = 'rhs-session'
 
 export const ADMIN_EMAIL = 'admin@risenstore.com'
-export const ADMIN_PASSWORD = 'RisenAdmin2026'
+const ADMIN_SEED = 'RisenAdmin2026'
 
 async function hashPassword(password: string): Promise<string> {
   const data = new TextEncoder().encode(`rhs:${password}`)
@@ -82,32 +82,20 @@ function toPublic(u: StoredUser): User {
 
 async function ensureAdminSeeded() {
   const users = loadUsers()
-  const existing = users.find((u) => u.email === ADMIN_EMAIL)
-  const passwordHash = await hashPassword(ADMIN_PASSWORD)
+  if (users.some((u) => u.email === ADMIN_EMAIL && u.role === 'admin')) return
 
-  if (!existing) {
-    users.push({
-      id: crypto.randomUUID(),
-      name: 'Store Admin',
-      email: ADMIN_EMAIL,
-      phone: '0787770484',
-      role: 'admin',
-      passwordHash,
-      createdAt: new Date().toISOString(),
-    })
-    saveUsers(users)
-    return
-  }
-
-  // Keep admin role + password in sync for the built-in account
-  const idx = users.findIndex((u) => u.email === ADMIN_EMAIL)
-  users[idx] = {
-    ...users[idx],
+  const passwordHash = await hashPassword(ADMIN_SEED)
+  const withoutOld = users.filter((u) => u.email !== ADMIN_EMAIL)
+  withoutOld.push({
+    id: crypto.randomUUID(),
+    name: 'Store Admin',
+    email: ADMIN_EMAIL,
+    phone: '0787770484',
     role: 'admin',
     passwordHash,
-    name: users[idx].name || 'Store Admin',
-  }
-  saveUsers(users)
+    createdAt: new Date().toISOString(),
+  })
+  saveUsers(withoutOld)
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
