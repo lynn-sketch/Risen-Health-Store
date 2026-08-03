@@ -200,7 +200,7 @@ export function Checkout() {
                 justifyContent: 'space-between',
                 gap: 8,
                 padding: '0.55rem 0',
-                borderBottom: '1px solid rgba(27,79,114,0.06)',
+                borderBottom: '1px solid rgba(47,125,91,0.06)',
                 fontSize: '0.92rem',
               }}
             >

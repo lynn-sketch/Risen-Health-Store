@@ -1,21 +1,21 @@
 :root {
-  /* Calm mid-blue (not near-black navy) + Risen gold */
+  /* Wellness green + gold */
   color-scheme: light;
-  --navy: #4a7fa5;
-  --navy-deep: #3a6b8f;
-  --navy-soft: #6b9bbf;
+  --navy: #2f7d5b;
+  --navy-deep: #216347;
+  --navy-soft: #4fa87a;
   --gold: #e1a32a;
   --gold-light: #eab94d;
   --gold-dim: #c99224;
-  --cream: #faf8f0;
-  --cream-deep: #e2e8f0;
-  --ink: #2a3d4f;
-  --muted: #5e7385;
+  --cream: #f7faf6;
+  --cream-deep: #dde8e1;
+  --ink: #24352c;
+  --muted: #5a7264;
   --white: #ffffff;
   --success: #2a9d8f;
   --danger: #dc3545;
   --radius: 2px;
-  --shadow: 0 18px 50px rgba(74, 127, 165, 0.12);
+  --shadow: 0 18px 50px rgba(47, 125, 91, 0.12);
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Work Sans', system-ui, sans-serif;
   --header-h: 76px;
@@ -41,7 +41,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(1200px 600px at 10% -10%, rgba(225, 163, 42, 0.12), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(74, 127, 165, 0.08), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(47, 125, 91, 0.08), transparent 50%),
     linear-gradient(180deg, var(--cream) 0%, var(--white) 40%, var(--cream) 100%);
   min-height: 100vh;
   line-height: 1.55;
@@ -118,7 +118,7 @@ p {
   background: var(--navy);
   border-color: var(--navy);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(74, 127, 165, 0.22);
+  box-shadow: 0 8px 24px rgba(47, 125, 91, 0.22);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.875rem;
@@ -226,7 +226,7 @@ p {
   top: 0;
   z-index: 50;
   background: var(--cream);
-  border-bottom: 1px solid rgba(74, 127, 165, 0.08);
+  border-bottom: 1px solid rgba(47, 125, 91, 0.08);
 }
 
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
@@ -301,7 +301,7 @@ p {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.35rem;
-  box-shadow: 0 6px 16px rgba(74, 127, 165, 0.25);
+  box-shadow: 0 6px 16px rgba(47, 125, 91, 0.25);
 }
 
 .brand-text {
@@ -350,7 +350,7 @@ p {
 }
 
 .icon-btn:hover {
-  background: rgba(74, 127, 165, 0.06);
+  background: rgba(47, 125, 91, 0.06);
 }
 
 .icon-btn .count {
@@ -510,7 +510,7 @@ p {
   inset: 0;
   background-color: var(--navy);
   background-image:
-    linear-gradient(105deg, rgba(58, 107, 143, 0.72) 0%, rgba(74, 127, 165, 0.48) 48%, rgba(74, 127, 165, 0.22) 100%),
+    linear-gradient(105deg, rgba(33, 99, 71, 0.72) 0%, rgba(47, 125, 91, 0.48) 48%, rgba(47, 125, 91, 0.22) 100%),
     var(--img-womens-wellness);
   background-position: center;
   background-size: cover;
@@ -521,7 +521,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(58, 107, 143, 0.35) 100%);
+  background: linear-gradient(180deg, transparent 50%, rgba(33, 99, 71, 0.35) 100%);
 }
 
 .hero-content {
@@ -577,7 +577,7 @@ p {
 .hero-cta .btn-outline {
   border-color: rgba(255, 252, 247, 0.7);
   color: var(--white);
-  background: rgba(58, 107, 143, 0.35);
+  background: rgba(33, 99, 71, 0.35);
 }
 
 .hero-cta .btn-outline:hover,
@@ -592,8 +592,8 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: rgba(74, 127, 165, 0.1);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  background: rgba(47, 125, 91, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   margin-top: -1px;
 }
 
@@ -661,7 +661,7 @@ p {
 
 .product-card {
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.08);
+  border: 1px solid rgba(47, 125, 91, 0.08);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -875,7 +875,7 @@ p {
   position: relative;
   min-height: 420px;
   background: var(--img-womens-wellness) center/cover;
-  border: 1px solid rgba(74, 127, 165, 0.08);
+  border: 1px solid rgba(47, 125, 91, 0.08);
 }
 
 .spotlight-visual::after {
@@ -885,7 +885,7 @@ p {
   right: 0;
   bottom: 0;
   padding: 1rem 1.25rem;
-  background: linear-gradient(transparent, rgba(58, 107, 143, 0.85));
+  background: linear-gradient(transparent, rgba(33, 99, 71, 0.85));
   color: var(--gold-light);
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -942,7 +942,7 @@ p {
 .drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(58, 107, 143, 0.45);
+  background: rgba(33, 99, 71, 0.45);
   z-index: 80;
   opacity: 0;
   pointer-events: none;
@@ -979,12 +979,12 @@ p {
 .drawer-head,
 .drawer-foot {
   padding: 1.15rem 1.25rem;
-  border-bottom: 1px solid rgba(74, 127, 165, 0.08);
+  border-bottom: 1px solid rgba(47, 125, 91, 0.08);
 }
 
 .drawer-foot {
   border-bottom: none;
-  border-top: 1px solid rgba(74, 127, 165, 0.08);
+  border-top: 1px solid rgba(47, 125, 91, 0.08);
   margin-top: auto;
   display: grid;
   gap: 0.65rem;
@@ -1008,7 +1008,7 @@ p {
   grid-template-columns: 64px 1fr auto;
   gap: 0.75rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(74, 127, 165, 0.06);
+  border-bottom: 1px solid rgba(47, 125, 91, 0.06);
 }
 
 .cart-line img {
@@ -1028,7 +1028,7 @@ p {
 .qty-ctrl button {
   width: 26px;
   height: 26px;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   background: var(--white);
   cursor: pointer;
 }
@@ -1107,7 +1107,7 @@ p {
 .toolbar input,
 .toolbar select {
   padding: 0.7rem 0.9rem;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   background: var(--white);
   border-radius: var(--radius);
   min-width: 180px;
@@ -1128,7 +1128,7 @@ p {
 
 .detail-media {
   background: linear-gradient(160deg, var(--cream), #ddd6c6);
-  border: 1px solid rgba(74, 127, 165, 0.08);
+  border: 1px solid rgba(47, 125, 91, 0.08);
   min-height: 420px;
 }
 
@@ -1164,7 +1164,7 @@ p {
 /* Assessment quiz */
 .quiz-card {
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   padding: 2rem;
   max-width: 720px;
 }
@@ -1178,7 +1178,7 @@ p {
 .quiz-option {
   text-align: left;
   padding: 0.95rem 1.1rem;
-  border: 1.5px solid rgba(74, 127, 165, 0.12);
+  border: 1.5px solid rgba(47, 125, 91, 0.12);
   background: var(--white);
   cursor: pointer;
   border-radius: var(--radius);
@@ -1299,7 +1299,7 @@ p {
 .form-grid textarea,
 .form-grid select {
   padding: 0.75rem 0.9rem;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   border-radius: var(--radius);
   background: var(--white);
 }
@@ -1313,7 +1313,7 @@ p {
 
 .summary-box {
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   padding: 1.25rem;
   position: sticky;
   top: calc(var(--header-h) + 90px);
@@ -1337,7 +1337,7 @@ p {
   gap: 1.25rem;
   align-items: center;
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   padding: 0.85rem;
 }
 
@@ -1378,7 +1378,7 @@ p {
 .sidebar-block,
 .sidebar-cta {
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   padding: 1rem;
 }
 
@@ -1423,7 +1423,7 @@ p {
 
 .sidebar-cats button:hover,
 .sidebar-cats button.active {
-  background: rgba(74, 127, 165, 0.08);
+  background: rgba(47, 125, 91, 0.08);
   color: var(--navy);
 }
 
@@ -1443,7 +1443,7 @@ p {
 
 .sidebar-block select {
   padding: 0.6rem 0.7rem;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   border-radius: var(--radius);
   background: #fff;
 }
@@ -1516,14 +1516,14 @@ p {
   flex: 1;
   min-width: 180px;
   padding: 0.7rem 0.9rem;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   border-radius: var(--radius);
   background: #fff;
 }
 
 .catalog-toolbar select {
   padding: 0.7rem 0.9rem;
-  border: 1px solid rgba(74, 127, 165, 0.15);
+  border: 1px solid rgba(47, 125, 91, 0.15);
   border-radius: var(--radius);
   background: #fff;
   min-width: 160px;
@@ -1626,7 +1626,7 @@ p {
     position: fixed;
     inset: 0;
     border: none;
-    background: rgba(58, 107, 143, 0.45);
+    background: rgba(33, 99, 71, 0.45);
     z-index: 90;
   }
 
@@ -1763,7 +1763,7 @@ p {
 
   .hero-media {
     background-image:
-      linear-gradient(160deg, rgba(58, 107, 143, 0.68) 0%, rgba(74, 127, 165, 0.45) 55%, rgba(74, 127, 165, 0.28) 100%),
+      linear-gradient(160deg, rgba(33, 99, 71, 0.68) 0%, rgba(47, 125, 91, 0.45) 55%, rgba(47, 125, 91, 0.28) 100%),
       var(--img-womens-wellness);
   }
 
@@ -1914,7 +1914,7 @@ p {
 .auth-card {
   max-width: 480px;
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.1);
+  border: 1px solid rgba(47, 125, 91, 0.1);
   padding: 2rem 1.5rem;
   box-shadow: var(--shadow);
 }
@@ -1928,7 +1928,7 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--navy);
-  background: rgba(74, 127, 165, 0.08);
+  background: rgba(47, 125, 91, 0.08);
   padding: 0.35rem 0.65rem;
   margin-bottom: 0.85rem;
 }
@@ -1998,7 +1998,7 @@ p {
   gap: 0.75rem;
   padding: 1rem;
   background: var(--white);
-  border: 1px solid rgba(74, 127, 165, 0.12);
+  border: 1px solid rgba(47, 125, 91, 0.12);
 }
 
 .admin-stat strong {
@@ -2021,7 +2021,7 @@ p {
 }
 
 .admin-tabs button {
-  border: 1px solid rgba(74, 127, 165, 0.2);
+  border: 1px solid rgba(47, 125, 91, 0.2);
   background: var(--white);
   color: var(--navy);
   padding: 0.55rem 0.9rem;
@@ -2049,7 +2049,7 @@ p {
 .admin-table td {
   text-align: left;
   padding: 0.7rem 0.55rem;
-  border-bottom: 1px solid rgba(74, 127, 165, 0.12);
+  border-bottom: 1px solid rgba(47, 125, 91, 0.12);
   vertical-align: top;
 }
 
@@ -2062,7 +2062,7 @@ p {
 
 .admin-table select {
   padding: 0.35rem 0.45rem;
-  border: 1px solid rgba(74, 127, 165, 0.25);
+  border: 1px solid rgba(47, 125, 91, 0.25);
   background: var(--white);
 }
 
@@ -2072,7 +2072,7 @@ p {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  background: rgba(74, 127, 165, 0.12);
+  background: rgba(47, 125, 91, 0.12);
   color: var(--navy);
 }
 

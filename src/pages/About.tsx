@@ -38,7 +38,7 @@ export function About() {
             Risen Health Store is an advanced wellness boutique inspired by the best of
             East African Norland retail — elevated with smarter product matching, wishlist
             & compare tools, WhatsApp-first checkout, and the official Risen Group brand
-            colours (calm blue and gold).
+            colours (wellness green and gold).
           </p>
           <p>
             We stock regenerative medicines, herbal formulas, functional coffee & tea,
